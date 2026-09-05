@@ -41,7 +41,7 @@ class Logger:
 
         arquivo.close()
 
-        print(log)
+        # print(log)
 
 
     def warning(self, message: str):
@@ -52,7 +52,7 @@ class Logger:
 
         arquivo.close()
 
-        print(log)
+        # print(log)
 
     
     def error(self, message: str):
@@ -63,7 +63,7 @@ class Logger:
 
         arquivo.close()
 
-        print(log)
+        # print(log)
 
 
     def zerar_log(self):
