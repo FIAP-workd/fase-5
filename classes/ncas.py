@@ -513,8 +513,9 @@ Escolha uma opção:
     def validar_regra_logica(self, usuario_autorizado, modulo_ativo):
         """
         Regra:
-
-            A = U AND M
+            Não podemos autorizar se o usuario_autorizado for False, ou se o modulo_ativo for False.
+            Dessa forma, utilizando De Morgan Law, apenas precisamos verificar se usuario_autorizado e modulo_ativo.
+            usuario_autorizado . modulo_ativo
 
         A consulta só é permitida quando:
         - o usuário está autorizado;
@@ -523,7 +524,11 @@ Escolha uma opção:
         Retorna True ou False.
         """
 
-        autorizacao = usuario_autorizado and modulo_ativo
+        if usuario_autorizado and modulo_ativo:
+            autorizacao = True
+        else:
+            autorizacao = False
+        
 
         self.logger.info(
             f"Validação lógica executada: "
@@ -652,7 +657,7 @@ Escolha uma opção:
         prioridade = ocorrencia["prioridade"]
 
         if prioridade == "critica":
-            acao = "Acionar imediatamente a equipe de manutenção"
+            acao = "Ativando módulos de contingência. Acionar imediatamente a equipe de manutenção."
             risco = "Alto risco operacional"
 
         elif prioridade == "alta":
@@ -687,66 +692,126 @@ Escolha uma opção:
 
         self.logger.info("Visualizando prompts.")
 
+        print("Escolha o tipo da Engenharia de Prompt.")
+        print("1 - ZERO SHOT")
+        print("2 - FEW SHOT")
+        print("3 - STRUCTURED OUTPUT")
+
+        opcao = input("\nDigite sua opção: ").strip()
+
         print("\n========== PROMPTS UTILIZADOS ==========\n")
 
-        print("----- ZERO-SHOT -----")
+        if opcao == "1":
+            print("----- ZERO-SHOT -----")
 
-        print(
-            """
-Classifique a prioridade da ocorrência abaixo:
+            print(
+                """
+                Você é um núcleo de análise de alertas de uma missão espacial.
+                Você recebe alertas do modelo e precisa classificar a prioridade e a ação sugerida.
+                Classifique a prioridade da ocorrência abaixo:
 
-"Falha crítica no sistema de oxigênio."
-
-Responda utilizando o formato JSON.
-"""
-        )
-
-        print("----- FEW-SHOT -----")
-
-        print(
-            """
-Exemplo 1:
-Ocorrência: "Luz de um corredor apagada."
-Classificação: Baixa
-
-Exemplo 2:
-Ocorrência: "Falha no sistema de oxigênio."
-Classificação: Alta
-
-Agora classifique:
-Ocorrência: "Oscilação no sistema de energia."
-"""
-        )
-
-        print("----- STRUCTURED OUTPUT -----")
-
-        print(
-            """
-{
-    "modulo": "Energia",
-    "prioridade": "Alta",
-    "acao_recomendada": "Acionar equipe de manutenção",
-    "risco": "Interrupção de módulos dependentes"
-}
-"""
-        )
-
-        print("----- RESPOSTA SIMULADA -----")
-
-        resposta = {
-            "modulo": "Energia",
-            "prioridade": "Alta",
-            "acao_recomendada": "Acionar equipe de manutenção",
-            "risco": "Interrupção de módulos dependentes"
-        }
-
-        print(
-            json.dumps(
-                resposta,
-                ensure_ascii=False,
-                indent=4
+                "Falha crítica no sistema de oxigênio."
+                """
             )
-        )
+
+            print("----- RESPOSTA SIMULADA -----")
+            print("--------- ZERO SHOT ---------")
+
+            print(
+                """
+                Prioridade: ALTA
+
+                Ocorrência: Falha crítica no sistema de oxigênio.
+
+                Ação sugerida: Acionar imediatamente os protocolos de emergência, verificar a disponibilidade de oxigênio reserva e priorizar a estabilização do sistema e a segurança da tripulação.
+
+                Justificativa: O sistema de oxigênio é essencial à sobrevivência. Uma falha crítica pode comprometer diretamente a vida da tripulação e exige resposta imediata.
+
+                """
+            )
+
+
+        elif opcao == "2":
+            print("----- FEW-SHOT -----")
+
+            print(
+                """
+                Você é um núcleo de análise de alertas de uma missão espacial.
+                Você recebe alertas do modelo e precisa classificar a prioridade e a ação sugerida.
+                Exemplo 1:
+                Ocorrência: "Luz de um corredor apagada."
+                Classificação: Baixa
+                Ação sugerida: Iniciar teste de religação da luz no corredor. Caso não acionar, chamar equipe técnica responsável.
+
+                Exemplo 2:
+                Ocorrência: "Falha no sistema de oxigênio."
+                Classificação: Alta
+                Ação sugerida: Ativar protocolos de emergência. Iniciar módulos de contingência e priorizar estabilidade do sistema.
+
+                Agora classifique:
+                Ocorrência: "Oscilação no sistema de energia."
+                """
+            )
+
+            print("----- RESPOSTA SIMULADA -----")
+            print("--------- ZERO SHOT ---------")
+
+            print(
+                """
+                Classificação: Média
+
+                Ação sugerida: Monitorar a oscilação e verificar os parâmetros de tensão e frequência do sistema. Caso persista ou se agrave, acionar a equipe técnica responsável e avaliar a ativação de módulos de contingência.
+                """
+            )
+
+
+
+        elif opcao == "3":
+
+            print("----- STRUCTURED OUTPUT -----")
+
+            print(
+                """
+                Você é um núcleo de análise de alertas de uma missão espacial.
+                Você recebe alertas do modelo e precisa classificar a prioridade e a ação sugerida.
+                Classifique a prioridade da ocorrência: "Falha crítica no sistema de oxigênio."
+
+                O retorno precisa ser no formato JSON abaixo:
+                {
+                    "modulo": "",
+                    "prioridade": "",
+                    "acao_recomendada": "",
+                    "risco": ""
+                }
+                """
+            )
+
+            print("----- RESPOSTA SIMULADA -----")
+
+            resposta = {
+                "modulo": "Energia",
+                "prioridade": "Alta",
+                "acao_recomendada": "Acionar equipe de manutenção",
+                "risco": "Interrupção de módulos dependentes"
+            }
+
+            print(
+                json.dumps(
+                    resposta,
+                    ensure_ascii=False,
+                    indent=4
+                )
+            )
+
+        else:
+            self.logger.warning(
+                            f"Opção de escolha de prompts inválida: {opcao}"
+                        )
+            
+            print("Opção inválida.")
+            self.pausar()
+            return
+
 
         self.pausar()
 

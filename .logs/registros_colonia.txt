@@ -37,3 +37,43 @@
 [2026-09-06 13:51:54] | INFO | Análise concluída para ocorrência 1.
 [2026-09-06 13:52:34] | INFO | Usuário escolheu opção 5
 [2026-09-06 13:52:34] | INFO | Visualizando prompts.
+[2026-09-06 18:27:33] | INFO | Ativação do sistema.
+[2026-09-06 18:27:36] | INFO | Usuário escolheu opção 1
+[2026-09-06 18:27:36] | INFO | Iniciando cadastro de alerta.
+[2026-09-06 18:29:29] | INFO | Dados salvos no JSON.
+[2026-09-06 18:29:29] | INFO | Ocorrência 3 registrada no TXT.
+[2026-09-06 18:29:29] | INFO | Alerta 3 cadastrado.
+[2026-09-06 18:29:36] | INFO | Usuário escolheu opção 4
+[2026-09-06 18:29:36] | INFO | Iniciando análise de alerta.
+[2026-09-06 18:29:46] | INFO | Validação lógica executada: usuario_autorizado=True, modulo_ativo=True, resultado=True
+[2026-09-06 18:29:46] | INFO | Análise concluída para ocorrência 3.
+[2026-09-06 18:57:01] | INFO | Usuário escolheu opção 1
+[2026-09-06 18:57:01] | INFO | Iniciando cadastro de alerta.
+[2026-09-06 18:57:23] | WARNING | Opção inválida informada: crítica
+[2026-09-06 18:59:35] | INFO | Dados salvos no JSON.
+[2026-09-06 18:59:35] | INFO | Ocorrência 4 registrada no TXT.
+[2026-09-06 18:59:35] | INFO | Alerta 4 cadastrado.
+[2026-09-06 18:59:42] | INFO | Usuário escolheu opção 4
+[2026-09-06 18:59:42] | INFO | Iniciando análise de alerta.
+[2026-09-06 18:59:50] | INFO | Validação lógica executada: usuario_autorizado=True, modulo_ativo=True, resultado=True
+[2026-09-06 18:59:50] | INFO | Análise concluída para ocorrência 4.
+[2026-09-06 19:01:27] | INFO | Ativação do sistema.
+[2026-09-06 19:01:29] | INFO | Usuário escolheu opção 4
+[2026-09-06 19:01:29] | INFO | Iniciando análise de alerta.
+[2026-09-06 19:01:32] | INFO | Validação lógica executada: usuario_autorizado=True, modulo_ativo=True, resultado=True
+[2026-09-06 19:01:32] | INFO | Análise concluída para ocorrência 4.
+[2026-09-06 19:01:41] | INFO | Usuário escolheu opção 5
+[2026-09-06 19:01:41] | INFO | Visualizando prompts.
+[2026-09-06 19:01:44] | WARNING | Opção de escolha de prompts inválida: 1
+[2026-09-06 19:01:54] | INFO | Usuário escolheu opção 5
+[2026-09-06 19:01:54] | INFO | Visualizando prompts.
+[2026-09-06 19:02:00] | WARNING | Opção de escolha de prompts inválida: 1
+[2026-09-06 19:03:30] | INFO | Ativação do sistema.
+[2026-09-06 19:03:33] | INFO | Usuário escolheu opção 5
+[2026-09-06 19:03:33] | INFO | Visualizando prompts.
+[2026-09-06 19:03:35] | WARNING | Opção de escolha de prompts inválida: 1
+[2026-09-06 19:03:51] | INFO | Usuário escolheu opção 5
+[2026-09-06 19:03:51] | INFO | Visualizando prompts.
+[2026-09-06 19:04:11] | INFO | Ativação do sistema.
+[2026-09-06 19:04:13] | INFO | Usuário escolheu opção 5
+[2026-09-06 19:04:13] | INFO | Visualizando prompts.

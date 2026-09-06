@@ -17,6 +17,24 @@
             "data": "2026-09-06 13:45:35",
             "status": "Aberta",
             "mensagem": "teste"
+        },
+        {
+            "id": 3,
+            "modulo": "Habitação",
+            "tipo": "Alerta",
+            "prioridade": "media",
+            "data": "2026-09-06 18:29:17",
+            "status": "Aberta",
+            "mensagem": "Erro de carregamento."
+        },
+        {
+            "id": 4,
+            "modulo": "Habitação",
+            "tipo": "Erro",
+            "prioridade": "critica",
+            "data": "2026-09-06 18:57:31",
+            "status": "Aberta",
+            "mensagem": "Falha do ambiente de Oxigênio"
         }
     ]
 }
