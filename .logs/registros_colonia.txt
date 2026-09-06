@@ -1,5 +1,39 @@
-[2026-09-06 11:50:41] | INFO | Ativação do sistema.
-[2026-09-06 11:50:42] | INFO | Usuário informou um valor 1
-[2026-09-06 11:50:43] | INFO | Usuário informou um valor 3
-[2026-09-06 11:50:44] | INFO | Usuário informou um valor 5
-[2026-09-06 11:50:48] | INFO | Usuário informou um valor 6
+[2026-09-06 13:31:15] | INFO | Ativação do sistema.
+[2026-09-06 13:31:17] | INFO | Iniciando cadastro de alerta.
+[2026-09-06 13:31:17] | WARNING | Arquivo JSON não encontrado. Criando estrutura inicial.
+[2026-09-06 13:31:32] | INFO | Dados salvos no JSON.
+[2026-09-06 13:31:32] | INFO | Ocorrência 1 registrada no TXT.
+[2026-09-06 13:31:32] | INFO | Alerta 1 cadastrado.
+[2026-09-06 13:31:40] | INFO | Iniciando consulta de alertas.
+[2026-09-06 13:31:51] | INFO | Iniciando consulta de alertas.
+[2026-09-06 13:32:01] | INFO | Iniciando consulta de alertas.
+[2026-09-06 13:32:19] | INFO | Iniciando consulta de alertas.
+[2026-09-06 13:32:22] | ERROR | Erro inesperado na execução: 'str' object has no attribute 'exists'
+[2026-09-06 13:45:15] | INFO | Desativando o sistema.
+[2026-09-06 13:45:20] | INFO | Ativação do sistema.
+[2026-09-06 13:45:22] | INFO | Iniciando cadastro de alerta.
+[2026-09-06 13:45:32] | WARNING | Opção inválida informada: asdf
+[2026-09-06 13:45:38] | INFO | Dados salvos no JSON.
+[2026-09-06 13:45:38] | INFO | Ocorrência 2 registrada no TXT.
+[2026-09-06 13:45:38] | INFO | Alerta 2 cadastrado.
+[2026-09-06 13:45:41] | INFO | Iniciando consulta de alertas.
+[2026-09-06 13:45:46] | INFO | Iniciando consulta de alertas.
+[2026-09-06 13:45:48] | ERROR | Erro inesperado na execução: 'str' object has no attribute 'exists'
+[2026-09-06 13:46:47] | INFO | Ativação do sistema.
+[2026-09-06 13:46:49] | INFO | Iniciando consulta de alertas.
+[2026-09-06 13:46:59] | INFO | Iniciando consulta de alertas.
+[2026-09-06 13:47:06] | INFO | Iniciando consulta de alertas.
+[2026-09-06 13:47:08] | ERROR | Erro inesperado na execução: module 'ntpath' has no attribute 'open'
+[2026-09-06 13:48:03] | INFO | Ativação do sistema.
+[2026-09-06 13:48:05] | INFO | Iniciando consulta de alertas.
+[2026-09-06 13:50:23] | INFO | Ativação do sistema.
+[2026-09-06 13:50:25] | INFO | Usuário escolheu opção 2
+[2026-09-06 13:50:25] | INFO | Iniciando consulta de alertas.
+[2026-09-06 13:51:38] | INFO | Usuário escolheu opção 3
+[2026-09-06 13:51:38] | INFO | Visualizando JSON.
+[2026-09-06 13:51:43] | INFO | Usuário escolheu opção 4
+[2026-09-06 13:51:43] | INFO | Iniciando análise de alerta.
+[2026-09-06 13:51:54] | INFO | Validação lógica executada: usuario_autorizado=True, modulo_ativo=False, resultado=False
+[2026-09-06 13:51:54] | INFO | Análise concluída para ocorrência 1.
+[2026-09-06 13:52:34] | INFO | Usuário escolheu opção 5
+[2026-09-06 13:52:34] | INFO | Visualizando prompts.
