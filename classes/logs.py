@@ -18,7 +18,7 @@ class Logger:
         if not os.path.exists(parent_dir):
             os.makedirs(parent_dir)
 
-        f = open(caminho_arquivo, mode="a")
+        f = open(caminho_arquivo, mode="a", encoding='utf-8')
         
         return f
     

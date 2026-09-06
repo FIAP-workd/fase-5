@@ -1,10 +1,20 @@
 from classes import Logger
 
 class InterromperLoop(Exception):
+    """
+    Classe de erro para interrupção do fluxo de while por dentro de uma segunda função.
+    Essa classe funciona apenas para chamada do fim do código.
+    """
     pass
 
 
 class NCAS:
+    """
+    Classe do Núcleo Cognitivo da Aurora Siger. Esse núcleo serve para ativarmos nossos logs, e nossas análises.
+    Aqui podemos cadastrar alertas e erros, consultar alertas e visualizar as nossas opções do json.
+    Vamos também gerar algumas análises dos alertas e gerar os prompts para jogarmos na IA e recebermos os resultados.
+    Além disso, temos também a opção de finalizarmos o sistema.
+    """
 
     def __init__(self):
         self.running = True
@@ -49,6 +59,7 @@ class NCAS:
                     if value > 6:
                         raise ValueError
                 except ValueError:
+                    self.logger.error(f"Input inválido: Usuário digitou valor {value}, valor inválido para o sistema.")
                     print("Valor inválido. Digite um número entre 1 e 6.")
 
                 finally:
@@ -62,10 +73,12 @@ class NCAS:
 
 
     def quit(self):
+        self.logger.info("Desativando o sistema.")
         raise InterromperLoop
     
 
     def cadastro_alertas(self):
+        self.logger.info("Iniciando ")
         print("cadastro")
 
     def consulta_alertas(self):
@@ -79,3 +92,6 @@ class NCAS:
 
     def visualizar_prompts(self):
         print("visualiza_prompt")
+
+    def zerar_logs(self):
+        self.logger.zerar_log()
