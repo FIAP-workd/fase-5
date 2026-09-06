@@ -1,24 +1,22 @@
 from datetime import datetime
-import os
+from pathlib import Path
 
 
 class Logger:
 
 
     def __init__(self):
-        self.__path_log = r".logs\registros_colonia.txt"
+        base_dir = Path(__file__).resolve().parent.parent
+        self.__path_log = base_dir / ".logs" / "registros_colonia.txt"
 
 
     def open_doc_log(self):
 
         caminho_arquivo = self.get_path
 
-        parent_dir = os.path.dirname(caminho_arquivo)
+        caminho_arquivo.parent.mkdir(parents=True, exist_ok=True)
 
-        if not os.path.exists(parent_dir):
-            os.makedirs(parent_dir)
-
-        f = open(caminho_arquivo, mode="a", encoding='utf-8')
+        f = caminho_arquivo.open(mode="a", encoding="utf-8")
         
         return f
     
@@ -68,11 +66,9 @@ class Logger:
 
     def zerar_log(self):
         caminho_arquivo = self.get_path
-        parent_dir = os.path.dirname(caminho_arquivo)
+        caminho_arquivo.parent.mkdir(parents=True, exist_ok=True)
 
-        os.makedirs(parent_dir, exist_ok=True)
-
-        with open(caminho_arquivo, "w") as f:
+        with caminho_arquivo.open("w", encoding="utf-8") as f:
             pass
 
     @property
