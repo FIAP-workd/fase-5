@@ -44,6 +44,10 @@ Ao selecionar **Analisar alerta**, informe o ID de uma ocorrência existente e r
 ```text
 consulta_permitida = usuario_autorizado and modulo_ativo
 ```
+Esse valor veio pela lei de De Morgan.
+
+Não gostaríamos de analisar se o usuário não estivesse autorizado nem se o modulo estivesse ativo. Dessa forma gostaríamos de ter $A' + B'$, e pela lei de De Morgan, podemos simplificar a estrutura fazendo apenas $(A.B)'$ (Primeira lei de __*De Morgan*__)
+
 
 Independentemente do resultado dessa validação, a aplicação apresenta uma resposta simulada para a ocorrência. A recomendação é definida localmente pela prioridade:
 
