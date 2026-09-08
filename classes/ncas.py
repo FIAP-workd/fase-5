@@ -706,11 +706,11 @@ Escolha uma opção:
 
             print(
                 """
-                Você é um núcleo de análise de alertas de uma missão espacial.
-                Você recebe alertas do modelo e precisa classificar a prioridade e a ação sugerida.
-                Classifique a prioridade da ocorrência abaixo:
+Você é um núcleo de análise de alertas de uma missão espacial.
+Você recebe alertas do modelo e precisa classificar a prioridade e a ação sugerida.
+Classifique a prioridade da ocorrência abaixo:
 
-                "Falha crítica no sistema de oxigênio."
+"Falha crítica no sistema de oxigênio."
                 """
             )
 
@@ -719,13 +719,13 @@ Escolha uma opção:
 
             print(
                 """
-                Prioridade: ALTA
+Prioridade: ALTA
 
-                Ocorrência: Falha crítica no sistema de oxigênio.
+Ocorrência: Falha crítica no sistema de oxigênio.
 
-                Ação sugerida: Acionar imediatamente os protocolos de emergência, verificar a disponibilidade de oxigênio reserva e priorizar a estabilização do sistema e a segurança da tripulação.
+Ação sugerida: Acionar imediatamente os protocolos de emergência, verificar a disponibilidade de oxigênio reserva e priorizar a estabilização do sistema e a segurança da tripulação.
 
-                Justificativa: O sistema de oxigênio é essencial à sobrevivência. Uma falha crítica pode comprometer diretamente a vida da tripulação e exige resposta imediata.
+Justificativa: O sistema de oxigênio é essencial à sobrevivência. Uma falha crítica pode comprometer diretamente a vida da tripulação e exige resposta imediata.
 
                 """
             )
@@ -736,20 +736,20 @@ Escolha uma opção:
 
             print(
                 """
-                Você é um núcleo de análise de alertas de uma missão espacial.
-                Você recebe alertas do modelo e precisa classificar a prioridade e a ação sugerida.
-                Exemplo 1:
-                Ocorrência: "Luz de um corredor apagada."
-                Classificação: Baixa
-                Ação sugerida: Iniciar teste de religação da luz no corredor. Caso não acionar, chamar equipe técnica responsável.
+Você é um núcleo de análise de alertas de uma missão espacial.
+Você recebe alertas do modelo e precisa classificar a prioridade e a ação sugerida.
+Exemplo 1:
+Ocorrência: "Luz de um corredor apagada."
+Classificação: Baixa
+Ação sugerida: Iniciar teste de religação da luz no corredor. Caso não acionar, chamar equipe técnica responsável.
 
-                Exemplo 2:
-                Ocorrência: "Falha no sistema de oxigênio."
-                Classificação: Alta
-                Ação sugerida: Ativar protocolos de emergência. Iniciar módulos de contingência e priorizar estabilidade do sistema.
+Exemplo 2:
+Ocorrência: "Falha no sistema de oxigênio."
+Classificação: Alta
+Ação sugerida: Ativar protocolos de emergência. Iniciar módulos de contingência e priorizar estabilidade do sistema.
 
-                Agora classifique:
-                Ocorrência: "Oscilação no sistema de energia."
+Agora classifique:
+Ocorrência: "Oscilação no sistema de energia."
                 """
             )
 
@@ -758,9 +758,9 @@ Escolha uma opção:
 
             print(
                 """
-                Classificação: Média
+Classificação: Média
 
-                Ação sugerida: Monitorar a oscilação e verificar os parâmetros de tensão e frequência do sistema. Caso persista ou se agrave, acionar a equipe técnica responsável e avaliar a ativação de módulos de contingência.
+Ação sugerida: Monitorar a oscilação e verificar os parâmetros de tensão e frequência do sistema. Caso persista ou se agrave, acionar a equipe técnica responsável e avaliar a ativação de módulos de contingência.
                 """
             )
 
@@ -772,17 +772,17 @@ Escolha uma opção:
 
             print(
                 """
-                Você é um núcleo de análise de alertas de uma missão espacial.
-                Você recebe alertas do modelo e precisa classificar a prioridade e a ação sugerida.
-                Classifique a prioridade da ocorrência: "Falha crítica no sistema de oxigênio."
+Você é um núcleo de análise de alertas de uma missão espacial.
+Você recebe alertas do modelo e precisa classificar a prioridade e a ação sugerida.
+Classifique a prioridade da ocorrência: "Falha crítica no sistema de oxigênio."
 
-                O retorno precisa ser no formato JSON abaixo:
-                {
-                    "modulo": "",
-                    "prioridade": "",
-                    "acao_recomendada": "",
-                    "risco": ""
-                }
+O retorno precisa ser no formato JSON abaixo:
+{
+    "modulo": "",
+    "prioridade": "",
+    "acao_recomendada": "",
+    "risco": ""
+}
                 """
             )
 
